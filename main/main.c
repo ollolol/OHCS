@@ -12,6 +12,10 @@ int main(int argc, char* argv[]){
   for(int a = 0;a < argc;a++){
     argvCheck(argv[a]);
   }
-  printf("%s\n",ReadFile);
+  int r = printf("%s\n",ReadFile);
+  if(!r){
+    printf("%s\n",Readfile);
+    return -1;
+  }
   return 0;
 }
