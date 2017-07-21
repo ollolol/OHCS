@@ -14,7 +14,7 @@ int main(int argc, char* argv[]){
   }
   int r = printf("%s\n",ReadFile);
   if(!r){
-    printf("%s\n",Readfile);
+    printf("%s\n",ReadFile);
     return -1;
   }
   return 0;
