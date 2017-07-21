@@ -9,6 +9,9 @@
 
 
 int main(int argc, char* argv[]){
-  return 0;
-
+  for(int a = argc;a--;){
+  
+  
+  }
+  return 0;
 }
