@@ -13,6 +13,7 @@
     You should have received a copy of the GNU General Public License
     along with Ollolol and Hsiaosvideo Cryptography System.  If not, see <http://www.gnu.org/licenses/>.
 */
-unsigned int plus(unsigned int* a, unsigned int* b);
+#include <stdio.h>
+void plus(unsigned int* return_value, unsigned int* a, unsigned int* b);
 void printBig(unsigned int* a);
-void scanBig(unsigned int* b);
+void scanBig(char* tmp, unsigned int* b);

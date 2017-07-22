@@ -23,7 +23,7 @@ void plus(unsigned int* return_value, unsigned int* a, unsigned int* b){
   unsigned int g = b[127];
   unsigned int h = a[127] >= b[127] ? a[127] : b[127];
   for(unsigned int c = 0; c < h; c++){
-    j[c] = a[f-c-1] + b[g-c-1] + carry;
+    j[c] = (f-c-1 >= 0 ? a[f-c-1] : 0) + (f-c-1 >= 0 ? b[g-c-1] : 0) + carry;
     d = j[c] % 10;
     carry = j[c] - d;
     carry /= 10;
