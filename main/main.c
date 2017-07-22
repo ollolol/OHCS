@@ -23,6 +23,7 @@
   2017/07/21
 */
 #include "../include/main.h"
+#include "../include/bigunsigned.h"
 #include "../include/argv.h"
 char file = 0;
 char R[100];
@@ -35,5 +36,13 @@ int main(int argc, char* argv[]){
     printf("Error: You did not input any files.\n");
     return -1;
   }
+  unsigned int tmpi[128];
+  char tmp[127];
+  unsigned int test[128];
+  unsigned int testb[128];
+  scanBig(tmp, test);
+  scanBig(tmp, testb);
+  plus(tmpi, test, testb);
+  printBig(tmpi);
   return 0;
 }

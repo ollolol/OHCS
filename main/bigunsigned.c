@@ -15,24 +15,36 @@
     along with Ollolol and Hsiaosvideo Cryptography System.  If not, see <http://www.gnu.org/licenses/>.
 */
 #include "../include/bigunsigned.h"
+unsigned int carry = 0;
 void plus(unsigned int* return_value, unsigned int* a, unsigned int* b){
   unsigned int j[127];
   unsigned int d;
-  unsigned int carry = 0;
   unsigned int f = a[127];
   unsigned int g = b[127];
   unsigned int h = a[127] >= b[127] ? a[127] : b[127];
   for(unsigned int c = 0; c < h; c++){
-    j[c] = (f-c-1 >= 0 ? a[f-c-1] : 0) + (f-c-1 >= 0 ? b[g-c-1] : 0) + carry;
-    d = j[c] % 10;
-    carry = j[c] - d;
-    carry /= 10;
-    j[c] -= carry;
+    j[c] = (f-c-1 >= 0 ? a[f-c-1] : 0) + (g-c-1 >= 0 ? b[g-c-1] : 0);
   }
   return_value[127] = h;
   for(int i = 0; i < h; i++){
     return_value[i] = j[h - i - 1];
   }
+  for(int i = h - 1; i > 0; i--){
+    return_value[i] += carry;
+    carry = 0;
+    if(return_value[i] >= 10){
+      carry = 1;
+      return_value[i] -= (return_value[i] / 10) * 10;    
+    }
+  }
+  if(carry){
+    ++return_value[127];
+    for(int a = return_value[127]; a>0; --a){
+      return_value[a+1] = return_value[a];
+    }
+    return_value[0] = 1;
+  }
+
 
 }
 
