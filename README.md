@@ -17,4 +17,7 @@
     You should have received a copy of the GNU General Public License
     along with Ollolol and Hsiaosvideo Cryptography System.  If not, see <http://www.gnu.org/licenses/>.
 ---------------------------------------------------------------------------------------------------------------
-# This system is not complete
+# What does the system do?
+
+OHCS can encrypt and decrypt a string by changing the carry of a string. OHCS randomly insert lots of chars
+into a string.So OHCS can encrypt the same string to different string.
