@@ -2,3 +2,7 @@
 *~
 *.o
 ohcs
+cmake*
+CMakeC*
+CMakeF*
+Make*
