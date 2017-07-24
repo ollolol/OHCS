@@ -3,7 +3,7 @@
 OCSS::OCSS()
 {
     DMode = false;
-    Char_List = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ `-=[]\\;',./~!@#$%^&*()_+{}|:\"<>?";
+    Char_List = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ `-=[]\\;\',./~!@#$%^&*()_+{}|:\"<>?";
     ios_base::sync_with_stdio(false);
     srand(time(NULL));
 }

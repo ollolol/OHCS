@@ -40,7 +40,7 @@ char *ReadFile = R;
 
 
 using namespace std;
-void threadtest(const string version){cout<<" Ollolol and Hsiaosvideo Crytoservice System\n Vesion "<<version<<'\n';}
+void threadtest(const string version){cout<<" Ollolol and Hsiaosvideo Crytography System\n Vesion "<<version<<'\n';}
 int main(int argc, char* argv[]){
     string data;
     int _checkAlpha = 1;
@@ -51,19 +51,12 @@ int main(int argc, char* argv[]){
         _checkAlpha = 0;
     }
     if(_checkAlpha){
-        FILE *file2 = fopen(ReadFile, "r");
-        if(!file2) { 
+        ifstream fin(ReadFile, ios::in);
+        if(!fin) { 
             printf("Error: Can not read the file."); 
             return 1; 
         }    
-        char dataINPUT[128];
-        int gg__gg = 0;
-        char ch;                                      
-        while((ch = fgetc(file2)) != EOF) { 
-            dataINPUT[gg__gg] = ch;
-	    ++gg__gg;
-        }
-        data = dataINPUT; 
+	getline(fin, data);
     }
     const string version = "1.1";
     threadtest(version);
