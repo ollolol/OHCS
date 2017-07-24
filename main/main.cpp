@@ -28,14 +28,14 @@
   Made by Hsiaosvideo
   2017/07/21
 */
-#include "../include/main.h"
-#include "../include/argv.h"
+#include "../include/main.hpp"
+#include "../include/argv.hpp"
 char file = 0;
 char R[100];
 char *ReadFile = R;
 
 #include <fstream>
-#include "../include/OCSS.h"
+#include "../include/OCSS.hpp"
 #include <thread>
 
 

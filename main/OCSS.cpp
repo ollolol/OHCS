@@ -1,4 +1,4 @@
-#include "../include/OCSS.h"
+#include "../include/OCSS.hpp"
 
 OCSS::OCSS()
 {
