@@ -1,6 +1,6 @@
 # OHCS
 # Ollolol and Hsiaosvideo Cryptography System
-# Copyright (C) 2017 CHAW-HUNG, HSIAO
+# Copyright (C) 2017 CHAO-HUNG, HSIAO
 ---------------------------------------------------------------------------------------------------------------
     This file is part of Ollolol and Hsiaosvideo Cryptography System.
 
