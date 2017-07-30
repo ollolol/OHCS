@@ -95,30 +95,20 @@ void OCSS::ToBase(string& Data,int Original_Base,int New_Base)
     {
         return;
     }
-    vector<BigInteger> value;
+    BigInteger total_value = 0;
     for(char& data : Data)
     {
+        total_value *= Original_Base;
         #pragma omp parallel for
-        for (unsigned long values = 0; values < Char_List.length(); values++)
+        for (int values = 0; values < Char_List.length(); values++)
         {
             if (Char_List[values] == data)
             {
-                value.push_back(values);
                 break;
             }
         }
+        total_value += values;
     }
-        //data = value's value
-    for(unsigned long x = 0; x < value.size(); x++)
-    {
-        //#pragma omp parallel for
-        for(unsigned long y = 0; y < x; y++)
-        {
-            value[y] *= Original_Base;
-        }
-    }
-    //update value: every on correct value
-    BigInteger total_value;
     for(BigInteger item : value)
     {
         total_value += item;
