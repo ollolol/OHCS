@@ -110,18 +110,12 @@ void OCSS::ToBase(string& Data,int Original_Base,int New_Base)
         }
         total_value += values;
     }
-    vector<BigInteger> new_value;
+    string return_value = "";
     while (total_value > 0)
     {
         BigInteger left = (total_value % New_Base);
-        new_value.push_back(left);
+        return_value = Char_List[left] + return_value;
         total_value = (total_value - left) / New_Base;
-    }
-    reverse(new_value.begin(), new_value.end());
-    string return_value = "";
-    for(BigInteger values : new_value)
-    {
-        return_value += Char_List[values.toInt()];
     }
     return_value = return_value.erase(return_value.find_last_not_of('0')+1);
     Data = return_value;
