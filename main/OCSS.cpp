@@ -100,7 +100,8 @@ void OCSS::ToBase(string& Data,int Original_Base,int New_Base)
     {
         total_value *= Original_Base;
         #pragma omp parallel for
-        for (int values = 0; values < Char_List.length(); values++)
+        int values = 0;
+        for (; values < Char_List.length(); values++)
         {
             if (Char_List[values] == data)
             {
@@ -109,11 +110,6 @@ void OCSS::ToBase(string& Data,int Original_Base,int New_Base)
         }
         total_value += values;
     }
-    for(BigInteger item : value)
-    {
-        total_value += item;
-    }
-        //total_value = Decimal value
     vector<BigInteger> new_value;
     while (total_value > 0)
     {
