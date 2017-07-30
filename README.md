@@ -1,6 +1,6 @@
 # OHCS
 # Ollolol and Hsiaosvideo Cryptography System
-# Copyright (C) 2017 CHAO-HUNG, HSIAO
+# Copyright (C) 2017 Ollolol && TNPLR
 ---------------------------------------------------------------------------------------------------------------
     This file is part of Ollolol and Hsiaosvideo Cryptography System.
 
@@ -21,5 +21,5 @@
 
 OHCS can encrypt and decrypt a string by changing the carry of a string. OHCS randomly insert lots of chars
 into a string.So OHCS can encrypt the same string to different string.
-#Notice
+# Notice
 The compiler needs to support c++11 standard
